@@ -12,11 +12,13 @@ public class Products {
         this.products = products;
     }
 
-    public void print(){
-        products.forEach( product -> {
-            product.print();
-            System.out.println();
-        });
+    public void print() {
+        if (products != null) {
+            products.forEach(product -> {
+                product.print();
+                System.out.println();
+            });
+        }
     }
 
     public List<Product> getProducts() {

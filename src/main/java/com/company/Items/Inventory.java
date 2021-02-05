@@ -12,11 +12,13 @@ public class Inventory {
         this.inventory = inventory;
     }
 
-    public void print(){
-        inventory.forEach( article -> {
-            article.print();
-            System.out.println();
-        });
+    public void print() {
+        if (inventory != null) {
+            inventory.forEach(article -> {
+                article.print();
+                System.out.println();
+            });
+        }
     }
 
     public List<Article> getInventory() {
