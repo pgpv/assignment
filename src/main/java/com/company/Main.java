@@ -21,39 +21,39 @@ public class Main {
             String command = scanner.next();
             String[] commands = command.split(" ");
 
-            if (commands[0].compareTo("help") == 0) {
+            if (commands[0].compareToIgnoreCase("help") == 0) {
                 System.out.println(Messages.HELP);
 
             }
 
-            else if (commands[0].compareTo("load") == 0 && commands.length > 2) {
-                if (commands[1].compareTo("inv") == 0) {
+            else if (commands[0].compareToIgnoreCase("load") == 0 && commands.length > 2) {
+                if (commands[1].compareToIgnoreCase("inv") == 0) {
                     inventory = loadInventory(inventory, commands[2]);
                     System.out.println(Messages.LOADED_INV);
                 }
 
-                else if (commands[1].compareTo("prod") == 0) {
+                else if (commands[1].compareToIgnoreCase("prod") == 0) {
                     products = loadProducts(products, commands[2]);
                     System.out.println(Messages.LOADED_PROD);
                 }
             }
 
-            else if (commands[0].compareTo("list") == 0 && commands.length > 1) {
-                if (commands[1].compareTo("inv") == 0) {
+            else if (commands[0].compareToIgnoreCase("list") == 0 && commands.length > 1) {
+                if (commands[1].compareToIgnoreCase("inv") == 0) {
                     inventory.print();
 
-                } else if (commands[1].compareTo("prod") == 0) {
+                } else if (commands[1].compareToIgnoreCase("prod") == 0) {
                     products.print(inventory);
                 }
             }
 
-            else if (commands[0].compareTo("sell") == 0 && commands.length > 1) {
+            else if (commands[0].compareToIgnoreCase("sell") == 0 && commands.length > 1) {
                 String productName = command.split(" ", 2)[1];
                 sellProduct(products, inventory, productName, 1 );
                 System.out.println( Messages.SOLD );
             }
 
-            else if (commands[0].compareTo("exit") == 0) {
+            else if (commands[0].compareToIgnoreCase("exit") == 0) {
                 break;
             }
 

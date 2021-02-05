@@ -26,7 +26,7 @@ public class Products {
 
         if (products != null) {
             products.forEach(product -> {
-                if (product.getName().compareTo(productName) == 0) {
+                if (product.getName().compareToIgnoreCase(productName) == 0) {
                     int availableStock = getAvailableStock(inventory, product);
 
                     if (availableStock >= quantity) {
@@ -43,7 +43,7 @@ public class Products {
         int availableStock = 0;
 
         for (Product product : products) {
-            if (product.getName().compareTo(productName) == 0) {
+            if (product.getName().compareToIgnoreCase(productName) == 0) {
                 availableStock = getAvailableStock(inventory, product);
             }
         }

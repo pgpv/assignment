@@ -24,7 +24,7 @@ public class Inventory {
     public void decreaseArticle( String name, int quantity ){
         if (inventory != null) {
             inventory.forEach(article -> {
-                if( article.getName().compareTo( name ) == 0 ) {
+                if( article.getName().compareToIgnoreCase( name ) == 0 ) {
                     article.setStock( article.getStock() - quantity );
                 }
             });
