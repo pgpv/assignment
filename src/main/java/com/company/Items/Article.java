@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Items;
 
 public class Article {
     private String name;
@@ -15,9 +15,9 @@ public class Article {
     }
 
     public void print(){
-        System.out.println(name);
-        System.out.println(art_id);
-        System.out.println(stock);
+        System.out.println("name: " + name);
+        System.out.println("art_id: " + art_id);
+        System.out.println("stock: " + stock);
     }
 
     public String getName() {

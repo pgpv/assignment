@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.Items.Inventory;
+import com.company.Items.Products;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Scanner;

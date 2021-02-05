@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Items;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class Product {
     }
 
     public void print(){
-        System.out.println(name);
+        System.out.println("name: " + name);
         contain_articles.forEach( contained_article -> {
             contained_article.print();
         });

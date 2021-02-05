@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Items;
 
 public class ContainedArticles {
     private int art_id;
@@ -13,8 +13,8 @@ public class ContainedArticles {
     }
 
     public void print(){
-        System.out.println(art_id);
-        System.out.println(amount_of);
+        System.out.println("art_id: " + art_id);
+        System.out.println("amount_of: " + amount_of);
     }
 
     public int getArt_id() {
