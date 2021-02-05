@@ -1,13 +1,13 @@
 package com.company.Items;
 
-public class ContainedArticles {
+public class ContainedArticle {
     private int art_id;
     private int amount_of;
 
-    public ContainedArticles() {
+    public ContainedArticle() {
     }
 
-    public ContainedArticles(int art_id, int amount_of) {
+    public ContainedArticle(int art_id, int amount_of) {
         this.art_id = art_id;
         this.amount_of = amount_of;
     }

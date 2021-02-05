@@ -4,12 +4,12 @@ import java.util.List;
 
 public class Product {
     private String name;
-    private List<ContainedArticles> contain_articles;
+    private List<ContainedArticle> contain_articles;
 
     public Product() {
     }
 
-    public Product(String name, List<ContainedArticles> contain_articles) {
+    public Product(String name, List<ContainedArticle> contain_articles) {
         this.name = name;
         this.contain_articles = contain_articles;
     }
@@ -25,7 +25,7 @@ public class Product {
         return name;
     }
 
-    public List<ContainedArticles> getContain_articles() {
+    public List<ContainedArticle> getContain_articles() {
         return contain_articles;
     }
 
@@ -33,7 +33,7 @@ public class Product {
         this.name = name;
     }
 
-    public void setContain_articles(List<ContainedArticles> contain_articles) {
+    public void setContain_articles(List<ContainedArticle> contain_articles) {
         this.contain_articles = contain_articles;
     }
 }

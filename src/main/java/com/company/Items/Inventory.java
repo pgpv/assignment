@@ -21,6 +21,27 @@ public class Inventory {
         }
     }
 
+    public void decreaseArticle( String name, int quantity ){
+        if (inventory != null) {
+            inventory.forEach(article -> {
+                if( article.getName().compareTo( name ) == 0 ) {
+                    article.setStock( article.getStock() - quantity );
+                }
+            });
+        }
+    }
+
+    public void decreaseArticle( int art_id, int quantity ){
+
+        if (inventory != null) {
+            inventory.forEach(article -> {
+                if( article.getArt_id() == art_id ) {
+                    article.setStock( article.getStock() - quantity );
+                }
+            });
+        }
+    }
+
     public List<Article> getInventory() {
         return inventory;
     }
