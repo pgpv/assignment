@@ -22,21 +22,25 @@ public class Products {
         }
     }
 
-    public void sellProduct(Inventory inventory, String productName, int quantity) {
+    public boolean sellProduct(Inventory inventory, String productName, int quantity) {
+        boolean sold = false;
 
         if (products != null) {
-            products.forEach(product -> {
+            for (Product product : products) {
                 if (product.getName().compareToIgnoreCase(productName) == 0) {
                     int availableStock = getAvailableStock(inventory, product);
 
                     if (availableStock >= quantity) {
+                        sold = true;
                         product.getContain_articles().forEach(containedArticle -> {
                             inventory.decreaseArticle(containedArticle.getArt_id(), quantity * containedArticle.getAmount_of());
                         });
                     }
                 }
-            });
+            }
         }
+
+        return sold;
     }
 
     private int getAvailableStock(Inventory inventory, String productName) {

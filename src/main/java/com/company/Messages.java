@@ -12,7 +12,10 @@ public class Messages {
             "Exit: exit";
 
     public static String SOLD = "product sold";
+    public static String NOT_SOLD = "product not sold";
     public static String LOADED_INV = "loaded inventory";
     public static String LOADED_PROD = "loaded products";
+    public static String NOT_LOADED_INV = "error loading inventory";
+    public static String NOT_LOADED_PROD = "error loading products";
     public static String UNRECOGNISED_COMMAND = "unrecognised command. please use help for a list of commands";
 }
